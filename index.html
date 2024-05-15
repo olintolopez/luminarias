@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Control de Luminarias</title>
+	<link rel="shortcut icon" href="./assets/images/lamp-32.png" type="image/x-icon">
+	<link rel="stylesheet" href="./assets/css/card.css" />
+	<link rel="stylesheet" href="./assets/main.css" />
+	<link rel="stylesheet" href="./assets/css/notifications.css">
+	<link rel="stylesheet" href="./assets/css/fontawesome.css">
+</head>
+
+<body onload="load()">
+	<!-- header section starts  -->
+	<header class="header_top">
+		<a href="#" class="logo">
+			<img src="./assets/images/hotelelrecreo.png" alt="" />
+		</a>
+        <div id="titulo" class="titulo">HOTEL HACIENDA EL RECREO</div>
+		<div id="menu-bar" class="fas fa-bars"></div>
+
+		<nav class="navbar">
+		
+			<div class="dropdown">
+				<a class="dropbtn" id="span_user">
+				  <i class="fa fa-user-friends"></i>
+				  <i class="fa fa-caret-down"></i>
+				</a>
+				<div class="dropdown-content" id="myDropdown">
+				  <a href="#" class="hide_profile" id="user_profile"><i class="fa fa-user-cog"></i> Perfil</a>
+				  <a href="#" class="" id="user_sign_up"><i class="fa fa-user-plus"></i> Registro</a>
+				  <a href="#" class="" id="user_sign_in"><i class="fa fa-sign-in-alt"></i> Login</a>
+				  <a href="#" class="hide_profile" id="user_sign_out"><i class="fa fa-sign-out-alt"></i> Salir</a>
+				</div>
+			</div>				  
+		</nav>
+	</header>
+	<!-- header section ends -->
+
+	<div class="container-center">
+		<div id="habitacion">
+			<img src="./assets/images/habitacion.jpg"  alt="" />
+	    </div>
+		<div class="ctrlLum">
+			<!-- <a href="./habitaciones.html"> -->
+			<a href="#"></a>
+				<h2>CONTROL DE LUMINARIAS</h2>				
+				<span id="abrir">Habitaciones</span>
+			</a>
+		</div>	
+	</div> 
+
+	<div id="modal_all_users" class="modal">
+		<div class="flex" id="flex">
+			<div class="contenido-modal">
+				<div class="modal-header flex">
+					<span class="title_form title_all_user">Usuarios</span>
+					<span class="close" id="close_all_user">&times;</span>
+				</div>
+				<div class="modal-body">
+					<div class="container-table">
+						<div class="table_row_header_user">
+							<div class="table__header">Usuario</div>
+							<div class="table__header" >Username</div>
+						</div>
+						<div class="container-table-body-users"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> 
+
+    <div id="modal_Register" class="modal">
+		<div class="flex" id="flex">
+			<div class="contenido-modal">
+				<div class="modal-header flex">
+					<span class="title_form title_user_register">Registro</span>
+					<span class="close" id="close_register_user">&times;</span>
+				</div>
+				<div class="modal-body">
+					<div class="contenedor-formulario">
+						<div class="wrap">
+							<form action="" class="form_user_register" name="form_user_register" method="get">
+								<div>
+                                   <input type="hidden" id="data_user_id" name="data_user_id" value="0"> 
+								   
+								   <div class="input-group">
+									 <input type="text" id="fullname" name="fullname" />
+									 <label class="label" for="fullname">Nombre completo:</label>
+								   </div>
+								   
+								   <div class="input-group">
+										<input type="text" id="userReg" name="userReg" />
+										<label class="label" for="userReg">Usuario:</label>
+									</div>
+									<div class="input-group">
+										<input type="password" id="passReg" name="passReg" />
+										<label class="label" for="passReg">Password:</label>
+									</div>
+									
+									<input type="submit" id="btn-submit-Register" value="registro" />
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> 
+
+    <div id="modal_user" class="modal">
+		<div class="flex" id="flex">
+			<div class="contenido-modal">
+				<div class="modal-header flex">
+					<span class="title_form title_user">Iniciar sesión</span>
+					<span class="close" id="close_user_login">&times;</span>
+				</div>
+				<div class="modal-body">
+					<div class="contenedor-formulario">
+						<div class="wrap">
+							<form action="" class="form_user_login" name="form_user_login" method="post">
+								<div>
+
+									<div class="input-group">
+										<input type="text" id="username" name="username" value="" />
+										<label class="label" for="username">Usuario:</label>
+									</div>
+									<div class="input-group">
+										<input type="password" id="pass" name="pass" value="" />
+										<label class="label" for="pass">Password:</label>
+									</div>
+									
+									<input type="submit" id="btn-submit-login" value="Enviar" />
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="miModal" class="modal">
+		<div class="flex" id="flex">
+			<div class="contenido-modal">
+				<div class="modal-header flex">
+					<span id="title_form" class="title_form title_book_edit">Add book's data</span>
+					<span class="close" id="close">&times;</span>
+				</div>
+				<div class="modal-body">
+					<div class="contenedor-formulario">
+						<div class="wrap">
+							<form action="" class="formulario" name="formulario_registro" method="get">
+								<div>
+									<div id="wrapper">
+										<div id="container-input">
+											<div class="wrap-file">
+												<div class="content-icon-camera">
+													<input type="file" id="file" name="file" accept="image/*" />
+													<label for="file" class="icon-camera"></label>
+												</div>
+												<div id="preview-images">
+													<img src="./assets/images/image-upload.png" id="img-preview" alt="" srcset="">
+												</div>
+												<progress id="img-upload-bar" value="0" max="100" style="width: 100%"></progress>
+											</div>
+										</div>
+									</div>
+
+									<div class="input-group">
+										<input type="text" id="title" name="title" />
+										<label class="label" for="title">Title:</label>
+									</div>
+									<div class="input-group">
+										<input type="text" id="author" name="author" />
+										<label class="label" for="author">Author:</label>
+									</div>
+									<div class="input-group">
+										<textarea id="description" name="description"></textarea>
+										<label class="label" for="description">Description</label>
+									</div>
+									
+									<div class="input-group radio">
+										<span>Status</span>
+										<input type="radio" name="status" id="read" value="read" />
+										<label for="read">Read</label>
+										<input type="radio" name="status" id="notread" value="not Read" />
+										<label for="notread">Not read</label>
+									</div>
+									<input type="submit" id="btn-submit" value="Publish" />
+									<input type="hidden" id="data__id" name="data__id" value="">
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="contenedor">
+		<div class="contenedor-toast" id="contenedor-toast"></div>
+	</div>
+
+    <script src="./assets/script.js"></script>
+	<script src="./storage/database.js"></script>
+	<script src="./storage/users.js"></script>
+	<script src="./assets/formulario.js"></script>
+	<script src="./server.js"></script>
+	<script src="./assets/modal.js"></script>
+	<script src="./assets/js/notifications.js" defer></script>
+</body>
+
+</html>
