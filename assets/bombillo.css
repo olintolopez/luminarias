@@ -1,0 +1,56 @@
+
+.halo{
+    fill: lightyellow;
+    transform: scale(.07);
+    transform-origin: 50%;
+    opacity: 0;
+    
+  }
+  
+  .cristal{
+    fill: rgba(0,0,0,.1);
+  }
+  
+  .casquillo{
+    fill: #333;
+  }
+  
+  .filamento{
+    fill: #777;
+  }
+  
+  
+  .encendida0 .filamento, .encendida1 .filamento,.encendida2 .filamento{
+    animation: filam 5s;
+    animation-fill-mode: forwards;
+  }
+  
+  .encendida0 .halo, .encendida1 .halo,.encendida2 .halo{
+    animation: hal 3s 3s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes filam{
+    0%{
+      fill:orange;
+    }
+    5%{
+     fill: #777; 
+    }
+    10%{
+      fill: orange;
+    }
+    15%{
+      fill: #777;
+    }
+    100%{
+      fill: orange;
+    }
+  }
+  
+  @keyframes hal{
+    100%{
+       opacity: 1;
+       transform: scale(.9) translateY(-20px);
+    }
+  }
