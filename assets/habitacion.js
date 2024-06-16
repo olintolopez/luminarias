@@ -7,12 +7,12 @@ function habitacion(i){
         ocupadas[i] = true;
         inputsHab[i].checked = true;
         if(i===0) {
-            document.getElementById('habOcup').innerText="Inhabilitado";
+            document.getElementById('habOcup').innerText="habilitado";
                           agregarToast(
                             { 
                                 tipo: 'info', 
                                 titulo: 'INFORMACION', 
-                                descripcion: 'Habitación Inhabilitada', 
+                                descripcion: 'Habitación habilitado', 
                                 autoCierre: true 
                             }
                           );
@@ -33,7 +33,7 @@ function habitacion(i){
         ocupadas[i] = false;
         inputsHab[i].checked = false;
         if(i===0) {
-            document.getElementById('habOcup').innerText="Habilitado";
+            document.getElementById('habOcup').innerText="Inhabilitado";
             
               agregarToast(
                             { 

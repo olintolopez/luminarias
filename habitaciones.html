@@ -1,7 +1,9 @@
+<!DOCTYPE html>
 <html>
-
 <head>
 	<meta charset="UTF-8" />
+	<meta http-equiv="Content-type" content="text/html charset=UTF-8" />
+	<meta name="viewport" content="width = device-width, initial-scale=1" />  
 	<title>Control de Luminarias - Hanitaciones</title>
 	<link rel="shortcut icon" href="./assets/images/lamp-32.png" type="image/x-icon">
 	<link rel="stylesheet" href="./assets/css/card.css" />
@@ -40,7 +42,7 @@
 			</div>
 			<div class="ctrOnOff">
 				
-				<svg viewBox="5 34 80 80" width="20%" height="20%"  id="bombilla0" class="bombilla">
+				<svg viewBox="5 34 99 102" width="20%" height="20%"  id="bombilla0" class="bombilla">
 					<defs>
 					<filter id="blur">
 						<feGaussianBlur stdDeviation="4.9" />
@@ -77,7 +79,7 @@
 
 			<div class="ctrOnOff">
 				
-				<svg viewBox="5 34 80 80" width="20%" height="20%" id="bombilla1" class="bombilla">
+				<svg viewBox="5 34 99 102" width="20%" height="20%" id="bombilla1" class="bombilla">
 					<defs>
 					<filter id="blur">
 						<feGaussianBlur stdDeviation="4.9" />
@@ -113,7 +115,7 @@
 		
 			<div class="ctrOnOff">
 				
-				<svg viewBox="5 34 80 80" width="20%" height="20%"  id="bombilla2" class="bombilla">
+				<svg viewBox="5 34 99 102" width="20%" height="20%"  id="bombilla2" class="bombilla">
 					<defs>
 					<filter id="blur">
 						<feGaussianBlur stdDeviation="4.9" />
@@ -164,7 +166,7 @@
 					</label>
 				</div>
 				<div class="titulo control">
-					<h2 id="habOcup" class="izquierda">Habilitado</h2>
+					<h2 id="habOcup" class="izquierda">Inhabilitado</h2>
 				</div>	
 			</div>
 
@@ -180,7 +182,68 @@
 					<h2 id="habVac" class="izquierda">Vacante</h2>
 				</div>	
 			</div>
+			<div class="ctrlLum">
+				<a href="#">
+					<h3>SENSOR PASILLO</h3>
+				</a>
+			</div>
+			<div class="ctrOnOff">
+				<div class="onoffswitch  hab_check">
+					<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox pasillos_checkbox" id="myonoffswitch6" tabindex="0" checked>
+					<label class="onoffswitch-label" for="myonoffswitch6" onclick="pasillo(0)">
+						<span class="onoffswitch-inner"></span>
+						<span class="onoffswitch-switch"></span>
+					</label>
+				</div>
+				<div class="titulo control">
+					<h2 id="pasilloHab" class="izquierda">Inhabilitado</h2>
+				</div>	
+			</div>
+
+			<div class="ctrOnOff">
+				<div class="onoffswitch hab_check">
+					<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox pasillos_checkbox" id="myonoffswitch7" tabindex="0">
+					<label class="onoffswitch-label" for="myonoffswitch7"  onclick="pasillo(1)">
+						<span class="onoffswitch-inner"></span>
+						<span class="onoffswitch-switch"></span>
+					</label>
+				</div>
+				<div class="titulo control">
+					<h2 id="PasilloVac" class="izquierda">Vacio</h2>
+				</div>	
+			</div>
+			<div class="ctrlLum">
+				<a href="#">
+					<h3>SENSOR BAÑO</h3>
+				</a>
+			</div>
+			<div class="ctrOnOff">
+				<div class="onoffswitch  hab_check">
+					<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox banos_checkbox" id="myonoffswitch8" tabindex="0" checked>
+					<label class="onoffswitch-label" for="myonoffswitch8" onclick="bano(0)">
+						<span class="onoffswitch-inner"></span>
+						<span class="onoffswitch-switch"></span>
+					</label>
+				</div>
+				<div class="titulo control">
+					<h2 id="banoHab" class="izquierda">Inhabilitado</h2>
+				</div>	
+			</div>
+
+			<div class="ctrOnOff">
+				<div class="onoffswitch hab_check">
+					<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox banos_checkbox" id="myonoffswitch9" tabindex="0">
+					<label class="onoffswitch-label" for="myonoffswitch9"  onclick="bano(1)">
+						<span class="onoffswitch-inner"></span>
+						<span class="onoffswitch-switch"></span>
+					</label>
+				</div>
+				<div class="titulo control">
+					<h2 id="banoVac" class="izquierda">Vacio</h2>
+				</div>	
+			</div>
 		</div>
+		
 
 	</div>
 	<div  class="footer"></div>
@@ -193,7 +256,8 @@
 	<script src="./storage/users.js"></script>
 	<script src="./assets/bombillo.js"></script>
 	<script src="./assets/habitacion.js"></script>
-	
+	<script src="./assets/pasillos.js"></script>
+	<script src="./assets/bano.js"></script>
 	<script>
 		const token = localStorage.getItem('token');
 		if(!token) location.href="index.html"; 
