@@ -140,6 +140,14 @@ img {
 	background-size: cover;
 }
 
+.container-center .ctrlLum{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+}
+
 .container-center .ctrlLum #abrir{
 	color: var(--tit);
 }
@@ -160,7 +168,6 @@ img {
 }
 
 .container-center .ctrlLum #abrir{
-	margin-top: 70px;
 	color: var(--bla);
 	cursor: pointer;
 	padding: 0.5rem 1.5rem;
