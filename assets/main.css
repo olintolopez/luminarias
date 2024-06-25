@@ -35,6 +35,10 @@ img {
 	border: none;
 }
 
+.linea{
+	border-top:var(--tit) solid 0.2rem;
+}
+
 #titulo h1, .ctrlLum h2,.ctrlLum h3 {
     color: var(--tit);
     font-size: 2.5em;
