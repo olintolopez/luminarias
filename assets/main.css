@@ -48,7 +48,9 @@ img {
 
 .ctrlLum h3{
 	font-size: 1.4em;
-	margin-bottom: 20px;
+	margin-top: 0.8rem;
+	margin-bottom: 10px;
+
 }
 
 .modal-header{
@@ -151,6 +153,7 @@ img {
 	justify-content: center;
 
 }
+
 .container-center .ctrlLum #abrir{
 	color: var(--tit);
 }
@@ -168,7 +171,6 @@ img {
 	color: var(--n1);
 	font-size: 20px;
 	font-weight: bold;
-	text-align: center;
 }
 
 .container-center .ctrlLum #abrir{
@@ -1116,7 +1118,7 @@ footer{
 	justify-content: space-between;
     align-items: center;
 	margin-top: 10px;
-	margin-bottom: 24px;
+	margin-bottom: 15px;
   }
 
   .control{
